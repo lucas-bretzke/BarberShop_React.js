@@ -1,5 +1,3 @@
-// Header.js
-
 import React, { useState, useEffect } from 'react'
 import logo from '../../assets/logo.png'
 import { Logo, Nav, Button, Section, Center } from './styles'
@@ -9,7 +7,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 10
+      const isScrolled = window.scrollY > 5
       setScrolled(isScrolled)
     }
 
@@ -23,12 +21,12 @@ export default function Header() {
   return (
     <Center scrolled={scrolled}>
       <Section>
-        <Logo src={logo} alt='Logo' />
+        <Logo scrolled={scrolled} src={logo} alt='Logo' />
         <Nav>
-          <Button>Home</Button>
-          <Button>Serviços</Button>
-          <Button>Depoimentos</Button>
-          <Button>Contato</Button>
+          <Button scrolled={scrolled}>Home</Button>
+          <Button scrolled={scrolled}>Serviços</Button>
+          <Button scrolled={scrolled}>Depoimentos</Button>
+          <Button scrolled={scrolled}>Contato</Button>
         </Nav>
       </Section>
     </Center>
