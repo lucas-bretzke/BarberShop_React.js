@@ -1,14 +1,23 @@
-import React from 'react'
-import bannerImage from '../../assets/banner.jpg' // Importe a imagem corretamente
+/**
+ * Styles.
+ */
 import {
-  Title,
   Main,
+  Title,
   Button,
   Section,
   ContentText,
   Description
 } from './styles'
 
+/**
+ * Images.
+ */
+import bannerImage from '../../assets/banner.jpg'
+
+/**
+ * Component.
+ */
 export default function Banner() {
   return (
     <Main style={{ backgroundImage: `url(${bannerImage})` }}>

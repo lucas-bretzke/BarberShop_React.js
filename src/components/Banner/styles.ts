@@ -14,7 +14,7 @@ export const Main = styled.div`
 
 export const Section = styled.div`
   width: 100%;
-  height: 1000px;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
