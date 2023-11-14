@@ -6,15 +6,14 @@ export const Main = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../../assets/banner.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 120vh;
 `
 
 export const Section = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,6 +26,7 @@ export const ContentText = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 30px;
 `
 
 export const Title = styled.h1`
@@ -38,7 +38,7 @@ export const Description = styled.p`
   color: white;
   margin: 40px 0;
   font-size: 26px;
-  max-width: 600px;
+  max-width: 50%;
   text-align: center;
 `
 

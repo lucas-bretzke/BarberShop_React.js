@@ -27,10 +27,11 @@ export const ItemContainer = styled.div`
 export const CustomSlider = styled(Slider)`
   position: absolute;
   left: 50%;
-  top: 95%;
+  top: 99%;
   transform: translateX(-50%);
   width: 100%;
   max-width: 1200px;
+  padding-bottom: 15px;
   z-index: 2;
 
   @media (max-width: 768px) {
