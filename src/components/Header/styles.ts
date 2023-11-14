@@ -6,17 +6,16 @@ export const Center = styled.div<{ scrolled: boolean }>`
   justify-content: center;
   width: 100%;
   height: ${({ scrolled }) => (scrolled ? '100px' : '120px')};
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
   transition: height 0.3s ease;
 `
-
-// ... outras definições de estilo
 
 export const Section = styled.section`
   width: 100%;
   max-width: 1200px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `
 
 export const Logo = styled.img`
