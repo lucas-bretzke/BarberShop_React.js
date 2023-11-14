@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from '../../components/Header'
 import { Center } from './styles'
+import Banner from '../../components/Banner'
 
 export default function Home() {
   return (
-    <div style={{ justifyContent: 'center', display: 'flex'}}>
-      <Center>
-        <Header />
-      </Center>
+    <div>
+      <Header />
+      <Banner />
     </div>
   )
 }

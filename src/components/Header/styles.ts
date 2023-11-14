@@ -1,15 +1,22 @@
-// styles.js
-
 import styled from 'styled-components'
 
-export const Section = styled.section`
+export const Center = styled.div<{ scrolled: boolean }>`
   position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: ${({ scrolled }) => (scrolled ? '100px' : '120px')};
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: height 0.3s ease;
+`
+
+// ... outras definições de estilo
+
+export const Section = styled.section`
   width: 100%;
   max-width: 1200px;
-  height: 120px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 `
 
 export const Logo = styled.img`
@@ -25,7 +32,7 @@ export const Nav = styled.nav`
 
 export const Button = styled.button`
   border: none;
-  color: grey;
+  color: white;
   margin: 0 10px;
   cursor: pointer;
   font-weight: bold;
@@ -34,10 +41,12 @@ export const Button = styled.button`
   text-transform: uppercase;
   background-color: transparent;
   border-bottom: 2px solid transparent;
+  letter-spacing: 1px;
+  text-shadow: 0.1em 0.1em 0.2em black;
 
   &:hover {
     color: #861418;
-    transition: 1s;
+    transition: 0.5s;
     border-bottom: 2px solid #861418;
   }
 `
