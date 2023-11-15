@@ -11,14 +11,14 @@ import {
   Image,
   ContainerText,
   P,
-  Line,
-  Button
+  Line
 } from './styles'
 
 /**
  * Images.
  */
 import establishment from '../../../../assets/miguelito-loja.png'
+import BaseButtom from '../../../../components/BaseButton'
 
 /**
  *  Component.
@@ -36,7 +36,6 @@ export default function AboutUsSection() {
               especialistas no preparo de seu cabelo e barba para o dia a dia,
               trabalho, formaturas, aniversários e casamentos.
             </P>
-
             <div>
               <div>
                 <Line />
@@ -53,7 +52,10 @@ export default function AboutUsSection() {
                 </P>
               </div>
             </div>
-            <Button>W Entrar em contato</Button>
+            <BaseButtom
+              label='W Entrar em contato'
+              onClick={() => console.log('teste')}
+            />
           </ContainerText>
           <Image src={establishment} alt='establishment' />
         </Section>
