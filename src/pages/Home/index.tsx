@@ -14,6 +14,7 @@ import Header from '../../components/Header'
 import Banner from '../../components/Banner'
 import ServicesScroll from '../../components/ServicesCarousel'
 import AboutUsSection from './components/AboutUsSection'
+import Differences from './components/Differences'
 
 /**
  *  Component.
@@ -33,6 +34,7 @@ export default function Home() {
       <Banner />
       <ServicesScroll items={items} />
       <AboutUsSection />
+      <Differences />
     </div>
   )
 }

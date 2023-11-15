@@ -32,7 +32,7 @@ export default function AboutUsSection() {
             <H1>Miguelito</H1>
             <H2>Quem somos</H2>
             <P>
-              Ropelato Barbearia é um centro de estética masculina. Somos
+              Miguelito Barbearia é um centro de estética masculina. Somos
               especialistas no preparo de seu cabelo e barba para o dia a dia,
               trabalho, formaturas, aniversários e casamentos.
             </P>
@@ -53,7 +53,7 @@ export default function AboutUsSection() {
               </div>
             </div>
             <BaseButtom
-              label='W Entrar em contato'
+              label='Entrar em contato'
               onClick={() => console.log('teste')}
             />
           </ContainerText>

@@ -24,12 +24,12 @@ export default function Banner() {
           <Title>Miguelito barbearia</Title>
 
           <Description>
-            Não aceite o básico, venha ser premium na #ropelatobarbearia!
+            Não aceite o básico, venha ser premium na #miguelitobarbearia!
             Elevamos sua presença com estilo e cuidados excepcionais!
           </Description>
         </ContentText>
         <BaseButton
-          label='W Entrar em contato'
+          label='Entrar em contato'
           onClick={() => console.log('teste')}
         />
       </Section>
