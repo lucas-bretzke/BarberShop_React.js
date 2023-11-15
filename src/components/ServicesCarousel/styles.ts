@@ -34,6 +34,35 @@ export const CustomSlider = styled(Slider)`
   padding-bottom: 15px;
   z-index: 2;
 
+  /* Estilo dos dots */
+  .slick-dots {
+    list-style: none;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slick-dots li {
+    margin: 0 4px; /* Ajuste o espaçamento entre os dots conforme necessário */
+  }
+
+  .slick-dots li button {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #444; /* Cor dos dots não ativos */
+    border: 1px solid #fff; /* Borda dos dots não ativos */
+    outline: none;
+    transition: all 0.3s;
+  }
+
+  .slick-dots li.slick-active button {
+    background-color: #fff; /* Cor do dot ativo */
+    border-color: #444; /* Borda do dot ativo */
+  }
+
   @media (max-width: 768px) {
     left: 0;
     transform: none;
