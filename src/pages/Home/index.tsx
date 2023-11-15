@@ -13,6 +13,7 @@ import VendaDeProdutos from '../../assets/produtos-masculinos.jpg'
 import Header from '../../components/Header'
 import Banner from '../../components/Banner'
 import ServicesScroll from '../../components/ServicesCarousel'
+import AboutUsSection from './components/AboutUsSection'
 
 /**
  *  Component.
@@ -31,6 +32,7 @@ export default function Home() {
       <Header />
       <Banner />
       <ServicesScroll items={items} />
+      <AboutUsSection />
     </div>
   )
 }
