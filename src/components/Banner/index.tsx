@@ -22,6 +22,14 @@ import BaseButton from '../../components/BaseButton'
  * Component.
  */
 export default function Banner() {
+  const phoneNumber = '47991364809'
+
+  function openWhatsapp() {
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}`
+
+    window.open(whatsappURL, '_blank')
+  }
+
   return (
     <Main style={{ backgroundImage: `url(${bannerImage})` }}>
       <Section>
@@ -36,7 +44,7 @@ export default function Banner() {
         <BaseButton
           leftIcon={faWhatsapp}
           label='Entrar em contato'
-          onClick={() => console.log('teste')}
+          onClick={openWhatsapp}
         />
       </Section>
     </Main>

@@ -7,7 +7,6 @@ import { Button } from './styles'
  * Icons.
  */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' // Add this import statement
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 /**
  * Types.
