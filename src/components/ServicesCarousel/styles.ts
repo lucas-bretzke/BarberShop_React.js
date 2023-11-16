@@ -1,10 +1,15 @@
 import Slider from 'react-slick'
 import styled from 'styled-components'
 
+export const Section = styled.section`
+  width: 100%;
+`
+
 export const ItemContainer = styled.div`
   text-align: center;
   max-width: 320px;
-  height: 280px;
+  height: auto;
+  max-height: 280px;
   background-color: white;
   border-radius: 5px;
   border: 2px solid #444444;
@@ -25,7 +30,6 @@ export const ItemContainer = styled.div`
 `
 
 export const CustomSlider = styled(Slider)`
-  position: absolute;
   left: 50%;
   top: 99%;
   transform: translateX(-50%);

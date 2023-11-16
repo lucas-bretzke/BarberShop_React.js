@@ -2,7 +2,7 @@
 import React from 'react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { CustomSlider, ItemContainer } from './styles'
+import { CustomSlider, ItemContainer, Section } from './styles'
 
 interface ItemProps {
   image: string
@@ -11,20 +11,28 @@ interface ItemProps {
 
 interface ServicesScrollProps {
   items: ItemProps[]
+  dots?: boolean
+  style?: React.CSSProperties
+  descriptionVisibility?: boolean
 }
 
-export default function ServicesCarousel({ items }: ServicesScrollProps) {
+export default function ServicesCarousel({
+  items,
+  style,
+  dots = false,
+  descriptionVisibility = false
+}: ServicesScrollProps) {
   function Item({ image, description }: ItemProps) {
     return (
       <ItemContainer>
         <img src={image} alt={description} />
-        <p>{description}</p>
+        {descriptionVisibility && <p>{description}</p>}
       </ItemContainer>
     )
   }
 
   const settings = {
-    dots: true,
+    dots: dots,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -36,10 +44,12 @@ export default function ServicesCarousel({ items }: ServicesScrollProps) {
   }
 
   return (
-    <CustomSlider {...settings}>
-      {items.map((item, index) => (
-        <Item key={index} {...item} />
-      ))}
-    </CustomSlider>
+    <Section style={style}>
+      <CustomSlider {...settings}>
+        {items.map((item, index) => (
+          <Item key={index} {...item} />
+        ))}
+      </CustomSlider>
+    </Section>
   )
 }

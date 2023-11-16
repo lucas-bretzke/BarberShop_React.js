@@ -8,8 +8,6 @@ export const Main = styled.div`
   align-items: center;
   justify-content: center;
   background-color: black;
-  border-top: 1px solid red;
-  border-bottom: 1px solid red;
 `
 
 export const Section = styled.div`
@@ -19,6 +17,7 @@ export const Section = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
 `
+
 export const H1 = styled.h1`
   position: relative;
   font-size: 100px;
@@ -36,14 +35,14 @@ export const H2 = styled.h2`
   font-size: 50px;
   color: #861418;
   font-weight: 100;
-  z-index: 2;
   margin: 0;
-  margin-top: -55px;
+  margin-top: -50px;
   margin-bottom: 80px;
   padding: 0;
   letter-spacing: 5px;
-
+  z-index: 2;
   text-transform: uppercase;
+  position: absolute;
 `
 
 export const H3 = styled.h3`
@@ -52,6 +51,7 @@ export const H3 = styled.h3`
   font-weight: bold;
   margin: 0;
   padding: 0;
+  margin-top: 100px;
 `
 
 export const P = styled.p`

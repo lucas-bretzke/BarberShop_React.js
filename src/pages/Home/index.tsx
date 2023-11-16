@@ -16,6 +16,8 @@ import ServicesScroll from '../../components/ServicesCarousel'
 import AboutUsSection from './components/AboutUsSection'
 import Differences from './components/Differences'
 import ServicesProvided from './components/ServicesProvided'
+import Contacts from './components/Contacts'
+import FollowUsOnInstagram from './components/FollowUsOnInstagram'
 
 /**
  *  Component.
@@ -33,10 +35,24 @@ export default function Home() {
     <div>
       <Header />
       <Banner />
-      <ServicesScroll items={items} />
+      <ServicesScroll
+        items={items}
+        dots
+        style={{
+          position: 'absolute',
+          top: 'calc(100vh - 10px)'
+        }}
+        descriptionVisibility={true}
+      />
       <AboutUsSection />
       <Differences />
       <ServicesProvided />
+      <FollowUsOnInstagram />
+      <ServicesScroll
+        items={items}
+        style={{ backgroundColor: 'black', paddingBottom: '25px' }}
+      />
+      <Contacts />
     </div>
   )
 }
