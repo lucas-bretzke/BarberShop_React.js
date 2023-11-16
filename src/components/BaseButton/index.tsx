@@ -6,8 +6,8 @@ import { Button } from './styles'
 /**
  * Icons.
  */
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' // Add this import statement
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 /**
  * Types.
@@ -15,15 +15,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 interface BaseButtonProps {
   label: string
   onClick: () => void
+  leftIcon: any
 }
 
 /**
  * Component.
  */
-export default function BaseButton({ label, onClick }: BaseButtonProps) {
+export default function BaseButton({
+  label,
+  onClick,
+  leftIcon
+}: BaseButtonProps) {
   return (
     <Button onClick={onClick}>
-      <FontAwesomeIcon icon={faWhatsapp} size='xl' /> {' '} {label}
+      <FontAwesomeIcon icon={leftIcon} size='xl' /> {label}
     </Button>
   )
 }

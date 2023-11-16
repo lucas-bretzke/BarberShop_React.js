@@ -4,6 +4,11 @@
 import { Main, Title, Section, ContentText, Description } from './styles'
 
 /**
+ * Icons.
+ */
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+
+/**
  * Images.
  */
 import bannerImage from '../../assets/banner.jpg'
@@ -29,6 +34,7 @@ export default function Banner() {
           </Description>
         </ContentText>
         <BaseButton
+          leftIcon={faWhatsapp}
           label='Entrar em contato'
           onClick={() => console.log('teste')}
         />

@@ -15,6 +15,11 @@ import {
 } from './styles'
 
 /**
+ * Icons.
+ */
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+
+/**
  * Images.
  */
 import establishment from '../../../../assets/miguelito-loja.png'
@@ -53,6 +58,7 @@ export default function AboutUsSection() {
               </div>
             </div>
             <BaseButtom
+              leftIcon={faWhatsapp}
               label='Entrar em contato'
               onClick={() => console.log('teste')}
             />
