@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Link, animateScroll as scroll } from 'react-scroll'
+import { Link } from 'react-scroll'
 import logo from '../../assets/logo.png'
 import { Logo, Nav, Button, Section, Center } from './styles'
 
-export default function Header() {
+const Header = () => {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -19,42 +19,27 @@ export default function Header() {
     }
   }, [])
 
-  function scrollToTop() {
-    const scrollStep = -window.scrollY / (500 / 15)
-    const scrollInterval = setInterval(() => {
-      if (window.scrollY !== 0) {
-        window.scrollBy(0, scrollStep)
-      } else {
-        clearInterval(scrollInterval)
-      }
-    }, 15)
-  }
+  const createLinkSection = (label: string, to: string) => (
+    <Button scrolled={scrolled}>
+      <Link to={to} smooth duration={500} style={{ padding: '8px 16px' }}>
+        {label}
+      </Link>
+    </Button>
+  )
 
   return (
     <Center scrolled={scrolled}>
       <Section>
         <Logo scrolled={scrolled} src={logo} alt='Logo' />
         <Nav>
-          <Button scrolled={scrolled} onClick={scrollToTop}>
-            Home
-          </Button>
-          <Button scrolled={scrolled}>
-            <Link to='services' smooth duration={500}>
-              Serviços
-            </Link>
-          </Button>
-          <Button scrolled={scrolled}>
-            <Link to='followUs' smooth duration={500}>
-              Clientes e mídias
-            </Link>
-          </Button>
-          <Button scrolled={scrolled}>
-            <Link to='contact' smooth duration={500}>
-              Contato
-            </Link>
-          </Button>
+          {createLinkSection('Home', 'banner')}
+          {createLinkSection('Serviços', 'services')}
+          {createLinkSection('Clientes e mídias', 'followUs')}
+          {createLinkSection('Contato', 'contact')}
         </Nav>
       </Section>
     </Center>
   )
 }
+
+export default Header

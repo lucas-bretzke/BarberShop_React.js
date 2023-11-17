@@ -31,7 +31,7 @@ export default function Banner() {
   }
 
   return (
-    <Main style={{ backgroundImage: `url(${bannerImage})` }}>
+    <Main id='banner' style={{ backgroundImage: `url(${bannerImage})` }}>
       <Section>
         <ContentText>
           <Title>Miguelito barbearia</Title>
