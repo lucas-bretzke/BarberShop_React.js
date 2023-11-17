@@ -7,6 +7,9 @@ export const Main = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #eaebeb;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  padding-top: 65px;
 `
 
 export const Center = styled.div`

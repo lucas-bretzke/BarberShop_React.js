@@ -11,6 +11,8 @@ export const Center = styled.div<{ scrolled: boolean }>`
     scrolled ? 'white' : 'rgba(0, 0, 0, 0.4)'};
   transition: height 0.3s ease;
   z-index: 100;
+  opacity: 0.9;
+  box-shadow: 0px 2px 30px 1px #4444;
 `
 
 export const Section = styled.section`
@@ -22,9 +24,11 @@ export const Section = styled.section`
 `
 
 export const Logo = styled.img<{ scrolled: boolean }>`
-  width: ${({ scrolled }) => (scrolled ? '70px' : '120px')};
+  width: ${({ scrolled }) => (scrolled ? '70px' : '100px')};
+  margin-top: ${({ scrolled }) => (scrolled ? '0' : '2.5%')};
   height: auto;
   border-radius: 100%;
+  box-shadow: 0px 3px 10px 2px #4444;
 `
 
 export const Nav = styled.nav`
@@ -34,7 +38,7 @@ export const Nav = styled.nav`
 export const Button = styled.button<{ scrolled: boolean }>`
   display: flex;
   border: none;
-  color: ${({ scrolled }) => (scrolled ? 'black' : 'white')};
+  color: ${({ scrolled }) => (scrolled ? 'black' : '#c9c9c9')};
   margin: 0 10px;
   cursor: pointer;
   font-weight: bold;

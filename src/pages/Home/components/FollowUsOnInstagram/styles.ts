@@ -8,6 +8,7 @@ export const Main = styled.div`
   align-items: center;
   justify-content: center;
   background-color: black;
+  padding-top: 65px;
 `
 
 export const Section = styled.div`

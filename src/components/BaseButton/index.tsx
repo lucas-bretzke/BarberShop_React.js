@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' // Add this imp
 interface BaseButtonProps {
   label: string
   onClick: () => void
-  leftIcon: any
+  leftIcon?: any
 }
 
 /**
