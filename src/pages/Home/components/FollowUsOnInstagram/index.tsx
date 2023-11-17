@@ -24,7 +24,7 @@ import BaseButton from '../../../../components/BaseButton'
  */
 export default function FollowUsOnInstagram() {
   return (
-    <Main>
+    <Main id='followUs'>
       <Section>
         <div>
           <H1>Trabalhos</H1>

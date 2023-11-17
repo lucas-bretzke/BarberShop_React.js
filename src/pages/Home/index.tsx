@@ -36,13 +36,10 @@ export default function Home() {
       <Header />
       <Banner />
       <ServicesScroll
-        items={items}
         dots
-        style={{
-          position: 'absolute',
-          top: 'calc(100vh - 10px)'
-        }}
-        descriptionVisibility={true}
+        items={items}
+        descriptionVisibility
+        style={{ position: 'absolute', top: 'calc(100vh - 10px)' }}
       />
       <AboutUsSection />
       <Differences />

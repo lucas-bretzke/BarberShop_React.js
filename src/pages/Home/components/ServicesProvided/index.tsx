@@ -38,7 +38,7 @@ export default function ServicesProvided() {
   }
 
   return (
-    <Main>
+    <Main id='services'>
       <H1>Estética</H1>
       <H2>Serviços</H2>
       <Center>{items.map(item => Item(item))}</Center>
