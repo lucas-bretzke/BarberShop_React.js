@@ -41,7 +41,14 @@ export default function ServicesProvided() {
     <Main id='services'>
       <H1>Estética</H1>
       <H2>Serviços</H2>
-      <Center>{items.map(item => Item(item))}</Center>
+      <Center>
+        {items.map((item, index) => (
+          <ItemContainer key={index}>
+            <img src={item.image} alt={item.description} />
+            <p>{item.description}</p>
+          </ItemContainer>
+        ))}
+      </Center>
     </Main>
   )
 }
