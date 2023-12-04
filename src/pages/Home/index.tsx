@@ -16,7 +16,7 @@ import ServicesScroll from '../../components/ServicesCarousel'
 import AboutUsSection from './components/AboutUsSection'
 import Differences from './components/Differences'
 import ServicesProvided from './components/ServicesProvided'
-import Contacts from './components/Contacts'
+import Contacts from './components/Contact'
 import FollowUsOnInstagram from './components/FollowUsOnInstagram'
 
 /**

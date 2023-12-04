@@ -26,7 +26,7 @@ export default function FollowUsOnInstagram() {
   return (
     <Main id='followUs'>
       <Section>
-        <div>
+        <div style={{ marginBottom: '120px' }}>
           <H1>Trabalhos</H1>
           <H2>Clientes & mídias sociais</H2>
           <H3>
