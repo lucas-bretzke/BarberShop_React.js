@@ -14,8 +14,8 @@ import Maps from '../../../../components/Maps'
  *  Component.
  */
 export default function Contact() {
-  const latitude = -23.55052
-  const longitude = -46.633308
+  const latitude = -26.881900
+  const longitude = -49.048300
 
   return (
     <Main id='contact'>
@@ -26,9 +26,9 @@ export default function Contact() {
         <Section>
           <ContainerContacts>
             <h3>Whatsapp</h3>
-            <a>(47) 99717-6572</a>
+            <a>(47) 93619-6572</a>
             <h3>E-mail</h3>
-            <a>contato@ropelatobarbearia.com.br</a>
+            <a>contato@miguelitobarberia.com.br</a>
             <h3>funcionamento</h3>
             <a>Segunda a Sábado, das 08h – 20h</a>
             <h3>Endereço</h3>
@@ -39,7 +39,7 @@ export default function Contact() {
             </p>
           </ContainerContacts>
           <Teste>
-            {/* <Maps latitude={latitude} longitude={longitude} /> */}
+            <Maps latitude={latitude} longitude={longitude} />
           </Teste>
         </Section>
       </Center>
