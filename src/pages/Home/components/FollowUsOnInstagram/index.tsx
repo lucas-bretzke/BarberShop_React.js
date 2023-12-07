@@ -23,6 +23,10 @@ import BaseButton from '../../../../components/BaseButton'
  *  Component.
  */
 export default function FollowUsOnInstagram() {
+  const handleInstagramClick = () => {
+    window.open('https://www.instagram.com/miguelitobarberia/')
+  }
+
   return (
     <Main id='followUs'>
       <Section>
@@ -36,7 +40,7 @@ export default function FollowUsOnInstagram() {
           <BaseButton
             leftIcon={faInstagram}
             label={'Nosso instagram'}
-            onClick={() => console.log('click')}
+            onClick={handleInstagramClick}
           />
         </div>
 
