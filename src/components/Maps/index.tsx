@@ -14,29 +14,35 @@ interface MapsProps {
 const Maps: React.FC<MapsProps> = ({ latitude, longitude }) => {
   useEffect(() => {
     const loadGoogleMapScript = () => {
-      const script = document.createElement('script')
-      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyA3wKA5tq5FxPAvKq7id3LU-Yu5IMMUj7s&callback=initMap`
-      script.defer = true
-      script.async = true
+      if (!document.querySelector('script[src*="maps.googleapis.com"]')) {
+        const script = document.createElement('script')
+        script.src =
+          'https://maps.googleapis.com/maps/api/js?key=AIzaSyA3wKA5tq5FxPAvKq7id3LU-Yu5IMMUj7s&callback=initMap'
+        script.defer = true
+        script.async = true
 
-      script.addEventListener('load', () => {
-        if (window.google) {
-          initMap()
-        } else {
+        script.addEventListener('load', () => {
+          if (window.google) {
+            initMap()
+          } else {
+            console.error(
+              'Erro: A API do Google Maps não está carregada corretamente.'
+            )
+          }
+        })
+
+        script.addEventListener('error', error => {
           console.error(
-            'Erro: A API do Google Maps não está carregada corretamente.'
+            'Erro ao carregar o script da API do Google Maps:',
+            error
           )
-        }
-      })
+        })
 
-      script.addEventListener('error', error => {
-        console.error('Erro ao carregar o script da API do Google Maps:', error)
-      })
-
-      document.head.appendChild(script)
+        document.head.appendChild(script)
+      }
     }
 
-    const initMap = () => {
+    function initMap() {
       if (window.google && window.google.maps) {
         const mapOptions = {
           center: { lat: latitude, lng: longitude },
@@ -60,9 +66,7 @@ const Maps: React.FC<MapsProps> = ({ latitude, longitude }) => {
       }
     }
 
-    loadGoogleMapScript()
-
-    return () => {
+    const cleanup = () => {
       const script = document.querySelector(
         'script[src^="https://maps.googleapis.com/maps/api/js"]'
       )
@@ -70,6 +74,10 @@ const Maps: React.FC<MapsProps> = ({ latitude, longitude }) => {
         script.remove()
       }
     }
+
+    loadGoogleMapScript()
+
+    setTimeout(() => cleanup, 100)
   }, [latitude, longitude])
 
   return <div id='google-map' style={{ height: '400px', width: '100%' }}></div>
