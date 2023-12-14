@@ -1,11 +1,16 @@
 import styled from 'styled-components'
 
+interface AnimationProps {
+  animate: boolean
+}
+
 export const Main = styled.div`
   padding-top: 150px;
   width: 100%;
   display: flex;
   justify-content: center;
   background-color: black;
+  overflow: hidden;
 `
 export const Center = styled.div`
   width: 100%;
@@ -23,9 +28,13 @@ export const Section = styled.section`
   justify-content: space-between;
 `
 
-export const ContainerText = styled.div`
+export const ContainerText = styled.div<AnimationProps>`
   height: 100%;
   max-width: 450px;
+
+  opacity: ${({ animate }) => (animate ? '1' : '0')};
+  transform: translateX(${({ animate }) => (animate ? '0' : '100vw')});
+  transition: transform 1.1s ease;
 `
 
 export const H1 = styled.h1`

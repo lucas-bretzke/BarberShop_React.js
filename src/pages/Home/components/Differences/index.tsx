@@ -19,18 +19,29 @@ import {
  * Images.
  */
 import fazendoABarba from '../../../../assets/fazendo-a-barba.jpg'
+import { useEffect, useState } from 'react'
 
 /**
  *  Component.
  */
 export default function Differences() {
+  const [animation, setAnimation] = useState(false)
+
+  const handleScroll = () => {
+    window.scrollY >= 1300 ? setAnimation(true) : setAnimation(false)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <Main>
       <Center>
         <Section>
           <Image src={fazendoABarba} alt='fazendoABarba' />
 
-          <ContainerText>
+          <ContainerText animate={animation}>
             <H1>NOSSOS DIFERENCIAIS</H1>
             <H2>
               Todo o <span>cuidado, sofisticação</span> e <span>qualidade</span>{' '}
@@ -49,7 +60,7 @@ export default function Differences() {
                 icon={faUserCheck}
                 color='#861418'
                 size='4x'
-                style={{  position: 'absolute', marginLeft: '-6%' }}
+                style={{ position: 'absolute', marginLeft: '-6%' }}
               />
               Oferecemos também nosso <span>PLANO DE ASSINATURA!</span> Já
               pensou em estar com o visual sempre em dia? Cabelo e Barba feitos
