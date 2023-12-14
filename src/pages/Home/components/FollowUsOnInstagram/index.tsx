@@ -18,18 +18,29 @@ import { Section, H1, H2, Main, ImageWithIcon, H3, P } from './styles'
  * Components.
  */
 import BaseButton from '../../../../components/BaseButton'
+import { useEffect, useState } from 'react'
 
 /**
  *  Component.
  */
 export default function FollowUsOnInstagram() {
+  const [animation, setAnimation] = useState(false)
+
   const handleInstagramClick = () => {
     window.open('https://www.instagram.com/miguelitobarberia/')
   }
 
+  const handleScroll = () => {
+    window.scrollY >= 3100 ? setAnimation(true) : setAnimation(false)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <Main id='followUs'>
-      <Section>
+      <Section animate={animation}>
         <div style={{ marginBottom: '120px' }}>
           <H1>Trabalhos</H1>
           <H2>Clientes & mídias sociais</H2>

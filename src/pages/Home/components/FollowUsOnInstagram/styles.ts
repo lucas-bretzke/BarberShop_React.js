@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+interface AnimationProps {
+  animate: boolean
+}
+
 export const Main = styled.div`
   width: 100%;
   height: calc(100vh - 90px);
@@ -11,12 +15,15 @@ export const Main = styled.div`
   padding-top: 65px;
 `
 
-export const Section = styled.div`
+export const Section = styled.div<AnimationProps>`
   width: 100%;
   max-width: 1300px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
+  opacity: ${({ animate }) => (animate ? '1' : '0')};
+  transition: 1.7s ease;
 `
 
 export const H1 = styled.h1`
