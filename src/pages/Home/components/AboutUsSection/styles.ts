@@ -21,8 +21,10 @@ export const Center = styled.div`
   max-width: 1200px;
 `
 
-export const Section = styled.section`
+export const Section = styled.section<AnimationProps>`
   display: flex;
+  opacity: ${({ animate }) => (animate ? '1' : '0')};
+  transition: 1s ease;
 `
 
 export const ContainerText = styled.div`
@@ -71,12 +73,12 @@ export const Line = styled.span`
   display: flex-start;
 `
 
-export const Image = styled.img<AnimationProps>`
+export const Image = styled.img`
   height: 600px;
   max-height: 600px;
   max-width: 500px;
   border: 5px solid #861418;
-  opacity: ${({ animate }) => (animate ? '1' : '0')};
-  transform: translateX(${({ animate }) => (animate ? '0' : '100vw')});
-  transition: transform 1.1s ease;
 `
+// opacity: ${({ animate }) => (animate ? '1' : '0')};
+// transform: translateX(${({ animate }) => (animate ? '0' : '100vw')});
+// transition: transform 1.1s ease;

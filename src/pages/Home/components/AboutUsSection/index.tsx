@@ -30,40 +30,27 @@ import { useEffect, useState } from 'react'
  *  Component.
  */
 export default function AboutUsSection() {
-  const phoneNumber = '47991364809'
+  const [animation, setAnimation] = useState(false)
 
   function openWhatsapp() {
+    const phoneNumber = '47991364809'
     const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}`
 
     window.open(whatsappURL, '_blank')
   }
 
-  const [animateMain, setAnimateMain] = useState(false)
-
   const handleScroll = () => {
-    const scrollPosition = window.scrollY
-    const triggerPosition = 600
-
-    if (scrollPosition >= triggerPosition) {
-      setAnimateMain(true)
-    } else {
-      setAnimateMain(false)
-    }
+    window.scrollY >= 500 ? setAnimation(true) : setAnimation(false)
   }
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
-
-    // Limpe o event listener no desmonte do componente
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
   }, [])
 
   return (
-    <Main>
+    <Main id='AboutUsSection'>
       <Center>
-        <Section>
+        <Section animate={animation}>
           <ContainerText>
             <H1>Miguelito</H1>
             <H2>Quem somos</H2>
@@ -94,11 +81,7 @@ export default function AboutUsSection() {
               onClick={openWhatsapp}
             />
           </ContainerText>
-          <Image
-            animate={animateMain}
-            src={establishment}
-            alt='establishment'
-          />
+          <Image src={establishment} alt='establishment' />
         </Section>
       </Center>
     </Main>
