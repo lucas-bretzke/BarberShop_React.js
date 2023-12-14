@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+interface AnimationProps {
+  animate: boolean
+}
+
 export const Main = styled.div`
   padding-top: 350px;
   width: 100%;
@@ -7,6 +11,7 @@ export const Main = styled.div`
   justify-content: center;
   background-color: black;
 `
+
 export const Center = styled.div`
   width: 100%;
   height: calc(100vh - 100px);
@@ -15,9 +20,11 @@ export const Center = styled.div`
   justify-content: center;
   max-width: 1200px;
 `
+
 export const Section = styled.section`
   display: flex;
 `
+
 export const ContainerText = styled.div`
   padding-right: 20%;
   height: 100%;
@@ -45,9 +52,11 @@ export const H2 = styled.h2`
   text-transform: uppercase;
   z-index: 2;
 `
+
 export const H3 = styled.h3`
   color: #861418;
 `
+
 export const P = styled.p`
   color: white;
   font-size: 17px;
@@ -62,9 +71,12 @@ export const Line = styled.span`
   display: flex-start;
 `
 
-export const Image = styled.img`
+export const Image = styled.img<AnimationProps>`
   height: 600px;
   max-height: 600px;
   max-width: 500px;
   border: 5px solid #861418;
+  opacity: ${({ animate }) => (animate ? '1' : '0')};
+  transform: translateX(${({ animate }) => (animate ? '0' : '100vw')});
+  transition: transform 1.1s ease;
 `

@@ -24,6 +24,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
  */
 import establishment from '../../../../assets/miguelito-loja.png'
 import BaseButtom from '../../../../components/BaseButton'
+import { useEffect, useState } from 'react'
 
 /**
  *  Component.
@@ -36,6 +37,29 @@ export default function AboutUsSection() {
 
     window.open(whatsappURL, '_blank')
   }
+
+  const [animateMain, setAnimateMain] = useState(false)
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY
+    const triggerPosition = 600
+
+    if (scrollPosition >= triggerPosition) {
+      setAnimateMain(true)
+    } else {
+      setAnimateMain(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    // Limpe o event listener no desmonte do componente
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <Main>
       <Center>
@@ -70,7 +94,11 @@ export default function AboutUsSection() {
               onClick={openWhatsapp}
             />
           </ContainerText>
-          <Image src={establishment} alt='establishment' />
+          <Image
+            animate={animateMain}
+            src={establishment}
+            alt='establishment'
+          />
         </Section>
       </Center>
     </Main>
