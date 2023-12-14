@@ -18,6 +18,7 @@ import Differences from './components/Differences'
 import ServicesProvided from './components/ServicesProvided'
 import Contacts from './components/Contact'
 import FollowUsOnInstagram from './components/FollowUsOnInstagram'
+import Footer from './components/Footer'
 
 /**
  *  Component.
@@ -50,6 +51,7 @@ export default function Home() {
         style={{ backgroundColor: 'black', paddingBottom: '25px' }}
       />
       <Contacts />
+      <Footer />
     </div>
   )
 }
