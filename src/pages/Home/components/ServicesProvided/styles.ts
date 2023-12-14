@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const Main = styled.div`
+interface AnimationProps {
+  animate: boolean
+}
+
+export const Main = styled.div<AnimationProps>`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -10,6 +14,9 @@ export const Main = styled.div`
   border-top: 2px solid red;
   border-bottom: 2px solid red;
   padding-top: 65px;
+
+  opacity: ${({ animate }) => (animate ? '1' : '0')};
+  transition: 1.7s ease;
 `
 
 export const Center = styled.div`

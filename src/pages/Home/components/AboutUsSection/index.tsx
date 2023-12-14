@@ -40,7 +40,7 @@ export default function AboutUsSection() {
   }
 
   const handleScroll = () => {
-    window.scrollY >= 500 ? setAnimation(true) : setAnimation(false)
+    window.scrollY >= 550 ? setAnimation(true) : setAnimation(false)
   }
 
   useEffect(() => {

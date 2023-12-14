@@ -7,6 +7,7 @@ import FazendoABarba from '../../../../assets/corte-barba.jpg'
 import CorteDeCabelo from '../../../../assets/corte-de-cabelo.jpg'
 import VendaDeProdutos from '../../../../assets/produtos-masculinos.jpg'
 import { Center, H1, H2, ItemContainer, Main } from './styles'
+import { useState, useEffect } from 'react'
 
 /**
  * Types.
@@ -20,6 +21,8 @@ interface ItemProps {
  *  Component.
  */
 export default function ServicesProvided() {
+  const [animation, setAnimation] = useState(false)
+
   const items = [
     { image: CorteDeCabelo, description: 'Corte de Cabelo' },
     { image: FazendoABarba, description: 'Barba' },
@@ -37,8 +40,16 @@ export default function ServicesProvided() {
     )
   }
 
+  const handleScroll = () => {
+    window.scrollY >= 2100 ? setAnimation(true) : setAnimation(false)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <Main id='services'>
+    <Main id='services' animate={animation}>
       <H1>Estética</H1>
       <H2>Serviços</H2>
       <Center>
