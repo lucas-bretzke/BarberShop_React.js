@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   H1,
   Main,
@@ -14,12 +14,22 @@ import Maps from '../../../../components/Maps'
  *  Component.
  */
 export default function Contact() {
-  const latitude = -26.881900
-  const longitude = -49.048300
+  const latitude = -26.8819
+  const longitude = -49.0483
+
+  const [animation, setAnimation] = useState(false)
+
+  const handleScroll = () => {
+    window.scrollY >= 4000 ? setAnimation(true) : setAnimation(false)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <Main id='contact'>
-      <Center>
+      <Center animate={animation}>
         <H1>Contato</H1>
         <H2>Fale conosco</H2>
 

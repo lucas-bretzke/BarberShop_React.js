@@ -23,7 +23,7 @@ export const Section = styled.div<AnimationProps>`
   justify-content: space-around;
 
   opacity: ${({ animate }) => (animate ? '1' : '0')};
-  transition: 1.7s ease;
+  transition: 1.5s ease;
 `
 
 export const H1 = styled.h1`

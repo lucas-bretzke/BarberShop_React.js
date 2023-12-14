@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+interface AnimationProps {
+  animate: boolean
+}
+
 export const Main = styled.main`
   width: 100%;
   height: calc(100vh);
@@ -10,13 +14,16 @@ export const Main = styled.main`
   background-color: #eaebeb;
 `
 
-export const Center = styled.div`
+export const Center = styled.div<AnimationProps>`
   width: 100%;
   max-width: 1200px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
+
+  opacity: ${({ animate }) => (animate ? '1' : '0')};
+  transition: 1.5s ease;
 `
 export const H1 = styled.h1`
   position: relative;

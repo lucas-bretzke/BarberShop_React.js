@@ -16,7 +16,7 @@ export const Main = styled.div<AnimationProps>`
   padding-top: 65px;
 
   opacity: ${({ animate }) => (animate ? '1' : '0')};
-  transition: 1.7s ease;
+  transition: 1.5s ease;
 `
 
 export const Center = styled.div`
