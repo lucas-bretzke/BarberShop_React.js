@@ -71,7 +71,7 @@ export const ContainerContacts = styled.div`
 `
 
 export const Teste = styled.div`
-  width: 700px;
+  width: 90%;
   height: 400px;
-  border: 1px solid black;
+  border: 3px solid #a8a9aa;
 `

@@ -80,7 +80,12 @@ const Maps: React.FC<MapsProps> = ({ latitude, longitude }) => {
     setTimeout(() => cleanup, 100)
   }, [latitude, longitude])
 
-  return <div id='google-map' style={{ height: '400px', width: '100%' }}></div>
+  return (
+    <div
+      id='google-map'
+      style={{ height: '100%', width: '100%', border: 'none' }}
+    ></div>
+  )
 }
 
 export default Maps

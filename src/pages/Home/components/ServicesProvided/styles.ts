@@ -49,7 +49,6 @@ export const H2 = styled.h2`
   margin-bottom: 80px;
   padding: 0;
   letter-spacing: 5px;
-
   text-transform: uppercase;
 `
 
@@ -61,7 +60,7 @@ export const ItemContainer = styled.div`
   box-sizing: border-box;
 
   img {
-    width: 100%;
+    width: 90%;
     max-width: 380px;
     height: auto;
     position: relative; /* Adicionado para permitir z-index */

@@ -28,7 +28,7 @@ export const Section = styled.section<AnimationProps>`
 `
 
 export const ContainerText = styled.div`
-  padding-right: 20%;
+  margin-right: 20%;
   height: 100%;
 `
 
@@ -39,7 +39,7 @@ export const H1 = styled.h1`
   margin: 0;
   padding: 0;
   position: absolute;
-  margin-left: -50px;
+  margin-left: -1%;
   margin-top: -40px;
   letter-spacing: 20px;
   text-transform: uppercase;
@@ -50,8 +50,9 @@ export const H2 = styled.h2`
   font-size: 50px;
   color: #861418;
   font-weight: 100;
-  margin-top: 12%;
+  margin-top: 10%;
   text-transform: uppercase;
+  position: relative;
   z-index: 2;
 `
 

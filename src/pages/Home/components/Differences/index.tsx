@@ -56,17 +56,12 @@ export default function Differences() {
               proporcionando momentos únicos de relaxamento e cuidado.
             </P>
             <P>
-              <FontAwesomeIcon
-                icon={faUserCheck}
-                color='#861418'
-                size='4x'
-                style={{ position: 'absolute', marginLeft: '-6%' }}
-              />
+              <FontAwesomeIcon icon={faUserCheck} color='#861418' size='2x' />
               Oferecemos também nosso <span>PLANO DE ASSINATURA!</span> Já
               pensou em estar com o visual sempre em dia? Cabelo e Barba feitos
               toda semana? Com o <span>PLANO DE ASSINATURA</span> da Miguelito
               Barbearia, você tem um pacote para sempre manter seu
-              <span>visual atualizado!</span>
+              <span> visual atualizado!</span>
             </P>
           </ContainerText>
         </Section>

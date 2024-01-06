@@ -6,13 +6,12 @@ export const Section = styled.section`
 `
 
 export const ItemContainer = styled.div`
-  text-align: center;
   max-width: 320px;
   height: auto;
-  max-height: 280px;
   background-color: white;
   border-radius: 5px;
   border: 2px solid #444444;
+  text-align: center;
 
   img {
     width: 320px;
