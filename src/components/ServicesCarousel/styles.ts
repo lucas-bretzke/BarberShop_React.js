@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 export const Section = styled.section`
   width: 100%;
+  padding: 0;
+  margin: 0;
 `
 
 export const ItemContainer = styled.div`
@@ -12,17 +14,17 @@ export const ItemContainer = styled.div`
   border-radius: 5px;
   border: 2px solid #444444;
   text-align: center;
+  margin: 0 3%;
 
   img {
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     height: auto;
-    max-width: 100%;
     border-radius: 3px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   }
 
   p {
-    collor: white;
     font-size: 18px;
     font-weight: bold;
   }
@@ -66,10 +68,7 @@ export const CustomSlider = styled(Slider)`
     border-color: #444; /* Borda do dot ativo */
   }
 
-  @media (max-width: 768px) {
-    left: 0;
-    transform: none;
-    margin: auto;
-    width: 100%;
+  @media (max-width: 1025px) {
+    max-width: 900px;
   }
 `
