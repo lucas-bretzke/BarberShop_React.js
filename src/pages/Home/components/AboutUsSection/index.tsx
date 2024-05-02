@@ -60,7 +60,6 @@ export default function AboutUsSection() {
               trabalho, formaturas, aniversários e casamentos.
             </P>
             <div>
-              <div>
                 <Line />
                 <H3 style={{ marginLeft: 20 }}>NOSSOS IDEAIS</H3>
                 <P style={{ marginLeft: 20 }}>
@@ -73,7 +72,6 @@ export default function AboutUsSection() {
                   específico para um serviço de excelência, completamente
                   IMPECÁVEL!
                 </P>
-              </div>
             </div>
             <BaseButtom
               leftIcon={faWhatsapp}

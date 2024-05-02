@@ -1,13 +1,4 @@
 /**
- * Images.
- */
-import Sobrancelha from '../../assets/fazendo-sobrancelha.jpeg'
-import LpezaDePele from '../../assets/limpeza-de-pele.jpg'
-import FazendoABarba from '../../assets/fazendo-a-barba.jpg'
-import CorteDeCabelo from '../../assets/corte-de-cabelo.jpg'
-import VendaDeProdutos from '../../assets/produtos-masculinos.jpg'
-
-/**
  * Components
  */
 import Header from '../../components/Header'
@@ -19,6 +10,15 @@ import ServicesProvided from './components/ServicesProvided'
 import Contacts from './components/Contact'
 import FollowUsOnInstagram from './components/FollowUsOnInstagram'
 import Footer from './components/Footer'
+
+/**
+ * Images.
+ */
+import Sobrancelha from '../../assets/fazendo-sobrancelha.jpeg'
+import LpezaDePele from '../../assets/limpeza-de-pele.jpg'
+import FazendoABarba from '../../assets/fazendo-a-barba.jpg'
+import CorteDeCabelo from '../../assets/corte-de-cabelo.jpg'
+import VendaDeProdutos from '../../assets/produtos-masculinos.jpg'
 
 /**
  *  Component.

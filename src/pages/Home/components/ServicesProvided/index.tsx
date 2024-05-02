@@ -42,6 +42,7 @@ export default function ServicesProvided() {
 
   const handleScroll = () => {
     window.scrollY >= 2100 ? setAnimation(true) : setAnimation(false)
+    window.scrollY >= 1900 ? setAnimation(true) : setAnimation(false)
   }
 
   useEffect(() => {

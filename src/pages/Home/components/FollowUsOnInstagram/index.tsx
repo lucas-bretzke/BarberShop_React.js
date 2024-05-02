@@ -7,7 +7,7 @@ import logo from '../../../../assets/logo.png'
  * Icons.
  */
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' // Add this import statement
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 /**
  * Styles.
@@ -32,6 +32,7 @@ export default function FollowUsOnInstagram() {
 
   const handleScroll = () => {
     window.scrollY >= 3100 ? setAnimation(true) : setAnimation(false)
+    window.scrollY >= 2700 ? setAnimation(true) : setAnimation(false)
   }
 
   useEffect(() => {
@@ -41,7 +42,7 @@ export default function FollowUsOnInstagram() {
   return (
     <Main id='followUs'>
       <Section animate={animation}>
-        <div style={{ marginBottom: '120px' }}>
+        <div style={{ paddingBottom: '100px' }}>
           <H1>Trabalhos</H1>
           <H2>Clientes & mídias sociais</H2>
           <H3>

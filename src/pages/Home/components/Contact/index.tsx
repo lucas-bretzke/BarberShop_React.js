@@ -21,6 +21,7 @@ export default function Contact() {
 
   const handleScroll = () => {
     window.scrollY >= 4000 ? setAnimation(true) : setAnimation(false)
+    window.scrollY >= 3500 ? setAnimation(true) : setAnimation(false)
   }
 
   useEffect(() => {

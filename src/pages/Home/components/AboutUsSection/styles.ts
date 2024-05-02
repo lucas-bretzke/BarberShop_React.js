@@ -30,6 +30,11 @@ export const Section = styled.section<AnimationProps>`
 export const ContainerText = styled.div`
   margin-right: 20%;
   height: 100%;
+  padding: 15px;
+
+  @media screen and (max-width: 1210px) {
+    margin-right: 0%;
+  }
 `
 
 export const H1 = styled.h1`
@@ -44,16 +49,26 @@ export const H1 = styled.h1`
   letter-spacing: 20px;
   text-transform: uppercase;
   z-index: 1;
+
+  @media screen and (max-width: 1210px) {
+    font-size: 60px;
+  }
 `
 
 export const H2 = styled.h2`
   font-size: 50px;
   color: #861418;
   font-weight: 100;
+  margin: 0;
   margin-top: 10%;
   text-transform: uppercase;
   position: relative;
   z-index: 2;
+
+  @media screen and (max-width: 1210px) {
+    font-size: 40px;
+    margin-top: 5%;
+  }
 `
 
 export const H3 = styled.h3`
@@ -64,22 +79,24 @@ export const P = styled.p`
   color: white;
   font-size: 17px;
   line-height: 1.5;
+
+  @media screen and (max-width: 1210px) {
+    font-size: 15px;
+  }
 `
 
 export const Line = styled.span`
   border: 1px solid white;
-  width: 0px;
   height: 210px;
   position: absolute;
-  display: flex-start;
+
+  @media screen and (max-width: 1030px) {
+    height: 170px;
+  }
 `
 
 export const Image = styled.img`
-  height: 600px;
-  max-height: 600px;
-  max-width: 500px;
+  max-height: 550px;
+  max-width: 42%;
   border: 5px solid #861418;
 `
-// opacity: ${({ animate }) => (animate ? '1' : '0')};
-// transform: translateX(${({ animate }) => (animate ? '0' : '100vw')});
-// transition: transform 1.1s ease;

@@ -13,6 +13,11 @@ export const Main = styled.div`
   justify-content: center;
   background-color: black;
   padding-top: 65px;
+
+  @media screen and (max-width: 1030px) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
 `
 
 export const Section = styled.div<AnimationProps>`
