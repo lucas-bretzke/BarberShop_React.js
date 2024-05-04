@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const Center = styled.div<{ scrolled: boolean }>`
   position: fixed;
   display: flex;
+  align-items: center;
   justify-content: center;
   width: 100%;
   height: 65px;
@@ -16,8 +17,9 @@ export const Center = styled.div<{ scrolled: boolean }>`
 `
 
 export const Section = styled.section`
-  width: 100%;
+  width: 100vw;
   max-width: 1200px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;

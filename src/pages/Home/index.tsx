@@ -11,6 +11,7 @@ import Contacts from './components/Contact'
 import FollowUsOnInstagram from './components/FollowUsOnInstagram'
 import Footer from './components/Footer'
 
+
 /**
  * Images.
  */
@@ -19,6 +20,7 @@ import LpezaDePele from '../../assets/limpeza-de-pele.jpg'
 import FazendoABarba from '../../assets/fazendo-a-barba.jpg'
 import CorteDeCabelo from '../../assets/corte-de-cabelo.jpg'
 import VendaDeProdutos from '../../assets/produtos-masculinos.jpg'
+
 
 /**
  *  Component.

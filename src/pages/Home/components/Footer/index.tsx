@@ -1,11 +1,19 @@
-import { Main, Section, Logo, Center } from './styles'
-import logo from '../../../../assets/logo.png'
 import {
   faFacebook,
   faInstagram,
   faWhatsapp
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+/**
+ * Styles
+ */
+import { Main, Section, Logo, Center } from './styles'
+
+/**
+ * Images
+ */
+import logo from '../../../../assets/logo.png'
 
 /**
  *  Component.

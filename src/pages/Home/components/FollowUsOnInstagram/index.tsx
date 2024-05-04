@@ -32,7 +32,6 @@ export default function FollowUsOnInstagram() {
 
   const handleScroll = () => {
     window.scrollY >= 3100 ? setAnimation(true) : setAnimation(false)
-    window.scrollY >= 2700 ? setAnimation(true) : setAnimation(false)
   }
 
   useEffect(() => {
