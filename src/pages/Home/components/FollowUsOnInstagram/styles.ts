@@ -12,6 +12,7 @@ export const Main = styled.div`
   align-items: center;
   justify-content: center;
   background-color: black;
+  /* padding: 15px; */
   padding-top: 65px;
 
   @media screen and (max-width: 1030px) {
@@ -42,6 +43,16 @@ export const H1 = styled.h1`
   letter-spacing: 35px;
   text-transform: uppercase;
   z-index: 1;
+
+  @media screen and (max-width: 980px) {
+    font-size: 60px;
+  }
+  @media screen and (max-width: 700px) {
+    font-size: 35px;
+  }
+  @media screen and (max-width: 510px) {
+    font-size: 20px;
+  }
 `
 
 export const H2 = styled.h2`
@@ -49,13 +60,23 @@ export const H2 = styled.h2`
   color: #861418;
   font-weight: 100;
   margin: 0;
-  margin-top: -50px;
+  margin-top: -4%;
   margin-bottom: 80px;
   padding: 0;
+  position: relative;
   letter-spacing: 5px;
   z-index: 2;
   text-transform: uppercase;
   position: absolute;
+
+  @media screen and (max-width: 980px) {
+    font-size: 35px;
+    margin-top: -2%;
+  }
+
+  @media screen and (max-width: 700px) {
+    font-size: 20px;
+  }
 `
 
 export const H3 = styled.h3`
@@ -65,6 +86,15 @@ export const H3 = styled.h3`
   margin: 0;
   padding: 0;
   margin-top: 100px;
+
+  @media screen and (max-width: 700px) {
+    font-size: 17px;
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: 510px) {
+    font-size: 12px;
+  }
 `
 
 export const P = styled.p`
@@ -72,6 +102,14 @@ export const P = styled.p`
   color: white;
   margin: 23px 0;
   padding: 0;
+
+  @media screen and (max-width: 700px) {
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 510px) {
+    font-size: 12px;
+  }
 `
 
 export const ImageWithIcon = styled.div`
@@ -80,6 +118,7 @@ export const ImageWithIcon = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 20px;
+  padding-top: 100px;
 
   img {
     width: 130px;

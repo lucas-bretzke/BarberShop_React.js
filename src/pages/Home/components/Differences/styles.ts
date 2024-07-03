@@ -5,8 +5,9 @@ interface AnimationProps {
 }
 
 export const Main = styled.div`
-  padding-top: 150px;
+  padding: 150px 0;
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   background-color: black;
@@ -17,23 +18,28 @@ export const Center = styled.div`
   height: calc(100vh - 100px);
   display: flex;
   align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-`
-
-export const Section = styled.section`
-  width: 100%;
-  display: flex;
-  align-items: center;
   justify-content: space-around;
+  max-width: 1200px;
+
+  @media screen and (max-width: 980px) {
+    height: auto;
+    flex-direction: column;
+  }
 `
 
 export const ContainerText = styled.div<AnimationProps>`
   height: 100%;
-  max-width: 450px;
+  width: 450px;
   opacity: ${({ animate }) => (animate ? '1' : '0')};
   transform: translateX(${({ animate }) => (animate ? '0' : '100vw')});
   transition: transform 1.1s ease;
+
+  @media screen and (max-width: 980px) {
+    width: 70%;
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+  }
 `
 
 export const H1 = styled.h1`
@@ -48,9 +54,13 @@ export const H1 = styled.h1`
   text-transform: uppercase;
   z-index: 1;
 
-  @media screen and (max-width: 1030px) {
+  @media screen and (max-width: 980px) {
     font-size: 40px;
     margin-left: -20px;
+  }
+
+  @media screen and (max-width: 510px) {
+    font-size: 20px;
   }
 `
 
@@ -64,8 +74,12 @@ export const H2 = styled.h2`
     color: #861418;
   }
 
-  @media screen and (max-width: 1030px) {
+  @media screen and (max-width: 980px) {
     font-size: 27px;
+  }
+
+  @media screen and (max-width: 510px) {
+    font-size: 20px;
   }
 `
 
@@ -78,18 +92,22 @@ export const P = styled.p`
     color: #861418;
   }
 
-  @media screen and (max-width: 1030px) {
+  @media screen and (max-width: 980px) {
     font-size: 15px;
+  }
+
+  @media screen and (max-width: 510px) {
+    font-size: 12px;
   }
 `
 
 export const Image = styled.img`
   width: 500px;
-  height: 100%;
+  height: 60%;
   border: 5px solid #861418;
   margin: auto 0;
 
-  @media screen and (max-width: 1030px) {
+  @media screen and (max-width: 980px) {
     width: 450px;
   }
 `

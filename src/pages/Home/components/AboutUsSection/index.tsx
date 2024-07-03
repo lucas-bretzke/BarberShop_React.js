@@ -7,7 +7,6 @@ import {
   H2,
   H3,
   Main,
-  Section,
   Image,
   ContainerText,
   P,
@@ -40,7 +39,7 @@ export default function AboutUsSection() {
   }
 
   const handleScroll = () => {
-    window.scrollY >= 550 ? setAnimation(true) : setAnimation(false)
+    window.scrollY >= 450 ? setAnimation(true) : setAnimation(false)
   }
 
   useEffect(() => {
@@ -49,38 +48,35 @@ export default function AboutUsSection() {
 
   return (
     <Main id='AboutUsSection'>
-      <Center>
-        <Section animate={animation}>
-          <ContainerText>
-            <H1>Miguelito</H1>
-            <H2>Quem somos</H2>
-            <P>
-              Miguelito Barbearia é um centro de estética masculina. Somos
-              especialistas no preparo de seu cabelo e barba para o dia a dia,
-              trabalho, formaturas, aniversários e casamentos.
+      <Center animate={animation}>
+        <ContainerText>
+          <H1>Miguelito</H1>
+          <H2>Quem somos</H2>
+          <P>
+            Miguelito Barbearia é um centro de estética masculina. Somos
+            especialistas no preparo de seu cabelo e barba para o dia a dia,
+            trabalho, formaturas, aniversários e casamentos.
+          </P>
+          <div>
+            <Line />
+            <H3 style={{ marginLeft: 20 }}>NOSSOS IDEAIS</H3>
+            <P style={{ marginLeft: 20 }}>
+              Prezamos sempre pela melhor experiência ao cliente, desde o
+              atendimento até a realização dos procedimentos estéticos com as
+              melhores marcas do planeta!
             </P>
-            <div>
-                <Line />
-                <H3 style={{ marginLeft: 20 }}>NOSSOS IDEAIS</H3>
-                <P style={{ marginLeft: 20 }}>
-                  Prezamos sempre pela melhor experiência ao cliente, desde o
-                  atendimento até a realização dos procedimentos estéticos com
-                  as melhores marcas do planeta!
-                </P>
-                <P style={{ marginLeft: 20 }}>
-                  Nossos Profissionais possuem todo o conhecimento técnico e
-                  específico para um serviço de excelência, completamente
-                  IMPECÁVEL!
-                </P>
-            </div>
-            <BaseButtom
-              leftIcon={faWhatsapp}
-              label='Entrar em contato'
-              onClick={openWhatsapp}
-            />
-          </ContainerText>
-          <Image src={establishment} alt='establishment' />
-        </Section>
+            <P style={{ marginLeft: 20 }}>
+              Nossos Profissionais possuem todo o conhecimento técnico e
+              específico para um serviço de excelência, completamente IMPECÁVEL!
+            </P>
+          </div>
+          <BaseButtom
+            leftIcon={faWhatsapp}
+            label='Entrar em contato'
+            onClick={openWhatsapp}
+          />
+        </ContainerText>
+        <Image src={establishment} alt='establishment' />
       </Center>
     </Main>
   )

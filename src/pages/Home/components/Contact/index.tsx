@@ -5,7 +5,7 @@ import {
   H2,
   Section,
   ContainerContacts,
-  Teste,
+  MapContainer,
   Center
 } from './styles'
 import Maps from '../../../../components/Maps'
@@ -49,9 +49,9 @@ export default function Contact() {
               89032-020 - Sobreloja
             </p>
           </ContainerContacts>
-          <Teste>
+          <MapContainer>
             <Maps latitude={latitude} longitude={longitude} />
-          </Teste>
+          </MapContainer>
         </Section>
       </Center>
     </Main>

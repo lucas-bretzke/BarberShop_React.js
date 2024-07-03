@@ -5,31 +5,46 @@ interface AnimationProps {
 }
 
 export const Main = styled.div`
-  padding-top: 350px;
+  padding-top: 250px;
+  padding-bottom: 150px;
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   background-color: black;
+  overflow: hidden;
 `
 
-export const Center = styled.div`
+export const Center = styled.div<AnimationProps>`
   width: 100%;
   height: calc(100vh - 100px);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   max-width: 1200px;
+
+  opacity: ${({ animate }) => (animate ? '1' : '0')};
+  transition: 1s ease;
+
+  @media screen and (max-width: 980px) {
+    height: auto;
+    flex-direction: column;
+  }
 `
 
 export const Section = styled.section<AnimationProps>`
   display: flex;
   opacity: ${({ animate }) => (animate ? '1' : '0')};
   transition: 1s ease;
+
+  @media screen and (max-width: 980px) {
+    flex-direction: column;
+  }
 `
 
 export const ContainerText = styled.div`
   margin-right: 20%;
-  height: 100%;
+  height: auto;
   padding: 15px;
 
   @media screen and (max-width: 1210px) {
@@ -53,6 +68,10 @@ export const H1 = styled.h1`
   @media screen and (max-width: 1210px) {
     font-size: 60px;
   }
+
+  @media screen and (max-width: 980px) {
+    font-size: 45px;
+  }
 `
 
 export const H2 = styled.h2`
@@ -68,6 +87,10 @@ export const H2 = styled.h2`
   @media screen and (max-width: 1210px) {
     font-size: 40px;
     margin-top: 5%;
+  }
+
+  @media screen and (max-width: 980px) {
+    font-size: 25px;
   }
 `
 
@@ -96,7 +119,14 @@ export const Line = styled.span`
 `
 
 export const Image = styled.img`
-  max-height: 550px;
-  max-width: 42%;
+  width: 42%;
+  height: 550px;
   border: 5px solid #861418;
+
+  @media screen and (max-width: 980px) {
+    margin-top: 40px;
+    width: 50%;
+    height: 50%;
+    max-height: 400px;
+  }
 `

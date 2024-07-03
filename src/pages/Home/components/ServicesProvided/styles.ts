@@ -37,6 +37,14 @@ export const H1 = styled.h1`
   letter-spacing: 35px;
   text-transform: uppercase;
   z-index: 1;
+
+  @media screen and (max-width: 700px) {
+    font-size: 70px;
+  }
+
+  @media screen and (max-width: 510px) {
+    font-size: 20px;
+  }
 `
 
 export const H2 = styled.h2`
@@ -45,11 +53,20 @@ export const H2 = styled.h2`
   font-weight: 100;
   z-index: 2;
   margin: 0;
-  margin-top: -55px;
+  margin-top: -4%;
   margin-bottom: 80px;
   padding: 0;
   letter-spacing: 5px;
   text-transform: uppercase;
+
+  @media screen and (max-width: 700px) {
+    font-size: 35px;
+  }
+
+  @media screen and (max-width: 510px) {
+    font-size: 20px;
+    margin-top: -2%;
+  }
 `
 
 export const ItemContainer = styled.div`

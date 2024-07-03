@@ -8,11 +8,15 @@ export const Main = styled.main`
   width: 100%;
   height: calc(100vh);
   display: flex;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #eaebeb;
+
+  @media screen and (max-width: 700px) {
+    height: auto;
+  }
 `
 
 export const Center = styled.div<AnimationProps>`
@@ -22,6 +26,7 @@ export const Center = styled.div<AnimationProps>`
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 3.5%;
   padding-top: 70px;
 
   opacity: ${({ animate }) => (animate ? '1' : '0')};
@@ -41,6 +46,9 @@ export const H1 = styled.h1`
   @media screen and (max-width: 1030px) {
     font-size: 70px;
   }
+  @media screen and (max-width: 610px) {
+    font-size: 40px;
+  }
 `
 
 export const H2 = styled.h2`
@@ -52,16 +60,26 @@ export const H2 = styled.h2`
   padding: 0px 25px;
   letter-spacing: 5px;
   text-transform: uppercase;
+
   @media screen and (max-width: 1030px) {
     font-size: 40px;
+  }
+
+  @media screen and (max-width: 610px) {
+    font-size: 20px;
   }
 `
 export const Section = styled.section`
   display: flex;
-  padding: 25px;
+  padding: 3.5%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `
 
 export const ContainerContacts = styled.div`
@@ -72,10 +90,14 @@ export const ContainerContacts = styled.div`
     font-size: 17px;
     letter-spacing: 3px;
     text-transform: uppercase;
+
+    @media screen and (max-width: 610px) {
+      font-size: 14px;
+    }
   }
 `
 
-export const Teste = styled.div`
+export const MapContainer = styled.div`
   width: 90%;
   height: 400px;
   border: 3px solid #a8a9aa;
@@ -83,5 +105,9 @@ export const Teste = styled.div`
   @media screen and (max-width: 1030px) {
     width: 80%;
     height: 300px;
+  }
+
+  @media screen and (max-width: 700px) {
+    margin-top: 30px;
   }
 `
