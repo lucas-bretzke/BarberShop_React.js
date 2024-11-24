@@ -8,7 +8,7 @@ export const Main = styled.main`
   align-items: center;
   justify-content: center;
   background-color: black;
-  padding: 0 10px;
+  /* padding: 0 10px; */
 `
 
 export const Center = styled.div`
@@ -54,9 +54,11 @@ export const Section = styled.section`
   border-top: 1px solid white;
 
   h2 {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 100;
     color: white;
+
+
   }
 
   span {
