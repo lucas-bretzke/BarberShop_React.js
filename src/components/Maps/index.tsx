@@ -78,7 +78,7 @@ const Maps: React.FC<MapsProps> = ({ latitude, longitude }) => {
     loadGoogleMapScript()
 
     setTimeout(() => cleanup, 100)
-  }, [latitude, longitude])
+  }, [latitude, longitude]) 
 
   return (
     <div

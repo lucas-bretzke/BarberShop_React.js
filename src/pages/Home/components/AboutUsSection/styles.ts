@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoints from '../../../../styles/breakpoints'
 
 interface AnimationProps {
   animate: boolean
@@ -26,7 +27,7 @@ export const Center = styled.div<AnimationProps>`
   opacity: ${({ animate }) => (animate ? '1' : '0')};
   transition: 1s ease;
 
-  @media screen and (max-width: 980px) {
+  @media ${breakpoints.bg} {
     height: auto;
     flex-direction: column;
   }
@@ -53,7 +54,6 @@ export const ContainerText = styled.div`
 `
 
 export const H1 = styled.h1`
-  font-size: 100px;
   color: white;
   font-weight: 100;
   margin: 0;
@@ -64,13 +64,10 @@ export const H1 = styled.h1`
   letter-spacing: 20px;
   text-transform: uppercase;
   z-index: 1;
+  font-size: 60px;
 
-  @media screen and (max-width: 1210px) {
-    font-size: 60px;
-  }
-
-  @media screen and (max-width: 980px) {
-    font-size: 45px;
+  @media ${breakpoints.sm} {
+    font-size: 28px;
   }
 `
 
@@ -89,7 +86,7 @@ export const H2 = styled.h2`
     margin-top: 5%;
   }
 
-  @media screen and (max-width: 980px) {
+  @media ${breakpoints.bg} {
     font-size: 25px;
   }
 `
@@ -103,7 +100,7 @@ export const P = styled.p`
   font-size: 17px;
   line-height: 1.5;
 
-  @media screen and (max-width: 1210px) {
+  @media ${breakpoints.bg} {
     font-size: 15px;
   }
 `
@@ -123,7 +120,12 @@ export const Image = styled.img`
   height: 550px;
   border: 5px solid #861418;
 
-  @media screen and (max-width: 980px) {
+  @media ${breakpoints.sm} {
+    width: 800px;
+    height: auto;
+  }
+
+  @media ${breakpoints.bg} {
     margin-top: 40px;
     width: 50%;
     height: 50%;

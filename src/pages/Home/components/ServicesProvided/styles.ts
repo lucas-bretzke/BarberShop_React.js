@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoints from '../../../../styles/breakpoints'
 
 interface AnimationProps {
   animate: boolean
@@ -25,6 +26,10 @@ export const Center = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
+  @media ${breakpoints.sm} {
+    /* flex-direction: column; */
+  }
 `
 export const H1 = styled.h1`
   position: relative;
@@ -38,12 +43,13 @@ export const H1 = styled.h1`
   text-transform: uppercase;
   z-index: 1;
 
-  @media screen and (max-width: 700px) {
+  @media ${breakpoints.md} {
     font-size: 70px;
   }
 
-  @media screen and (max-width: 510px) {
+  @media ${breakpoints.sm} {
     font-size: 20px;
+    letter-spacing: 25px;
   }
 `
 
@@ -76,6 +82,13 @@ export const ItemContainer = styled.div`
   margin-bottom: 60px;
   box-sizing: border-box;
 
+  @media ${breakpoints.sm} {
+    width: 50%;
+    height: auto;
+    position: relative;
+    padding: 15px;
+  }
+
   img {
     width: 90%;
     max-width: 380px;
@@ -94,7 +107,6 @@ export const ItemContainer = styled.div`
   p {
     position: absolute;
     bottom: -7%;
-    left: -4%;
 
     margin: 0;
     padding: 15px 20px;
@@ -105,5 +117,12 @@ export const ItemContainer = styled.div`
     font-weight: bold;
     background-color: white;
     z-index: 2;
+
+    @media ${breakpoints.sm} {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding: 15px;
+    }
   }
 `

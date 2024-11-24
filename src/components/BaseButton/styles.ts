@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoints from '../../styles/breakpoints'
 
 export const Button = styled.button`
   border: none;
@@ -14,5 +15,9 @@ export const Button = styled.button`
   &:hover {
     transition: 1s;
     background-color: #ba1b1f;
+  }
+
+  @media ${breakpoints.sm} {
+    font-size: 12px;
   }
 `

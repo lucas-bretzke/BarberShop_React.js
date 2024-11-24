@@ -41,11 +41,13 @@ export default function Banner() {
             Elevamos sua presença com estilo e cuidados excepcionais!
           </Description>
         </ContentText>
-        <BaseButton
-          leftIcon={faWhatsapp}
-          label='Entrar em contato'
-          onClick={openWhatsapp}
-        />
+        <span style={{ marginBottom: '100px' }}>
+          <BaseButton
+            leftIcon={faWhatsapp}
+            label='Entrar em contato'
+            onClick={openWhatsapp}
+          />
+        </span>
       </Section>
     </Main>
   )

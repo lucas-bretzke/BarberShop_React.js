@@ -1,7 +1,7 @@
 /**
  * Components
  */
-import Header from '../../components/Header'
+import Header from '../../components/NavBar'
 import Banner from '../../components/Banner'
 import ServicesScroll from '../../components/ServicesCarousel'
 import AboutUsSection from './components/AboutUsSection'
@@ -31,7 +31,7 @@ export default function Home() {
     { image: LpezaDePele, description: 'Limpeza de Pele' },
     { image: FazendoABarba, description: 'Barba' },
     { image: Sobrancelha, description: 'Sobrancelha' },
-    { image: VendaDeProdutos, description: 'Produtos de Estética Masculina' }
+    { image: VendaDeProdutos, description: 'Produtos de Estética' }
   ]
 
   return (

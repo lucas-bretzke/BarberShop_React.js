@@ -8,6 +8,7 @@ export const Main = styled.main`
   align-items: center;
   justify-content: center;
   background-color: black;
+  padding: 0 10px;
 `
 
 export const Center = styled.div`
