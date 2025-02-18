@@ -41,7 +41,7 @@ export default function FollowUsOnInstagram() {
   return (
     <Main id='followUs'>
       <Section animate={animation}>
-        <div>
+        <div style={{ padding: '0 10px' }}>
           <H1>Trabalhos</H1>
           <H2>Clientes & mídias sociais</H2>
           <H3>

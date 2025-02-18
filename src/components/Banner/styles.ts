@@ -1,6 +1,7 @@
 // styles.js
 
 import styled from 'styled-components'
+import breakpoints from '../../styles/breakpoints'
 
 export const Main = styled.div`
   width: 100%;
@@ -34,6 +35,10 @@ export const Title = styled.h1`
   color: white;
   font-size: 40px;
   text-transform: uppercase;
+
+  @media ${breakpoints.sm} {
+    font-size: 25px;
+  }
 `
 
 export const Description = styled.p`
@@ -42,4 +47,8 @@ export const Description = styled.p`
   font-size: 26px;
   max-width: 50%;
   text-align: center;
+
+  @media ${breakpoints.sm} {
+    font-size: 20px;
+  }
 `

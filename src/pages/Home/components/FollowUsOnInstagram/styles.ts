@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoints from '../../../../styles/breakpoints'
 
 interface AnimationProps {
   animate: boolean
@@ -30,6 +31,10 @@ export const Section = styled.div<AnimationProps>`
 
   opacity: ${({ animate }) => (animate ? '1' : '0')};
   transition: 1.5s ease;
+
+  @media ${breakpoints.sm} {
+   
+  }
 `
 
 export const H1 = styled.h1`
@@ -43,14 +48,14 @@ export const H1 = styled.h1`
   letter-spacing: 35px;
   text-transform: uppercase;
   z-index: 1;
+  font-size: 60px;
 
-  @media screen and (max-width: 980px) {
-    font-size: 60px;
-  }
-  @media screen and (max-width: 700px) {
+  @media ${breakpoints.md} {
     font-size: 35px;
   }
-  @media screen and (max-width: 510px) {
+
+  @media ${breakpoints.sm} {
+    letter-spacing: 15px;
     font-size: 20px;
   }
 `

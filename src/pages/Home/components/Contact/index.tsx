@@ -37,11 +37,11 @@ export default function Contact() {
         <Section>
           <ContainerContacts>
             <h3>Whatsapp</h3>
-            <a>(47) 93619-6572</a>
+            <p>(47) 93619-6572</p>
             <h3>E-mail</h3>
-            <a>contato@miguelitobarberia.com.br</a>
+            <p>contato@miguelitobarberia.com.br</p>
             <h3>funcionamento</h3>
-            <a>Segunda a Sábado, das 08h – 20h</a>
+            <p>Segunda a Sábado, das 08h – 20h</p>
             <h3>Endereço</h3>
 
             <p>

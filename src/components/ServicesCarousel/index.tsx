@@ -35,7 +35,7 @@ export default function ServicesCarousel({
     dots: dots,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: window.innerWidth >= 576 ?  3 : 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,

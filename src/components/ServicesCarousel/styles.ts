@@ -1,5 +1,6 @@
 import Slider from 'react-slick'
 import styled from 'styled-components'
+import breakpoints from '../../styles/breakpoints'
 
 export const Section = styled.section`
   width: 100%;
@@ -27,6 +28,11 @@ export const ItemContainer = styled.div`
   p {
     font-size: 18px;
     font-weight: bold;
+  }
+  @media ${breakpoints.sm} {
+    p {
+      font-size: 12px;
+    }
   }
 `
 

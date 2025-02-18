@@ -28,7 +28,7 @@ export default function ServicesProvided() {
     { image: FazendoABarba, description: 'Barba' },
     { image: Sobrancelha, description: 'Sobrancelha' },
     { image: LpezaDePele, description: 'Limpeza de Pele' },
-    { image: VendaDeProdutos, description: 'Produtos de Estética Masculina' }
+    { image: VendaDeProdutos, description: 'Produtos de Estética' }
   ]
 
   function Item({ image, description }: ItemProps) {

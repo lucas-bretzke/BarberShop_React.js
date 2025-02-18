@@ -24,13 +24,25 @@ export default function Footer() {
       <Center>
         <Logo src={logo} alt='Logo' />
         <div>
-          <a>
+          <a
+            href='https://www.facebook.com/miguelitobarberia/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <FontAwesomeIcon icon={faFacebook} size='2x' color='white' />
           </a>
-          <a>
+          <a
+            href='https://www.instagram.com/miguelitobarberia/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <FontAwesomeIcon icon={faInstagram} size='2x' color='white' />
           </a>
-          <a>
+          <a
+            href='https://api.whatsapp.com/send?phone=47992520427'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <FontAwesomeIcon icon={faWhatsapp} size='2x' color='white' />
           </a>
         </div>

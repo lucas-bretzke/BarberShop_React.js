@@ -7,11 +7,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logo from '../../assets/logo.png'
 
 import { Logo, Nav, Button, Section, Center } from './styles'
-import { isConstructorDeclaration } from 'typescript'
 
-const Header = () => {
-  const [scrolled, setScrolled] = useState(false)
-  const [showNav, setShowNav] = useState(window.innerWidth >= 600)
+export default function NavBar() {
+  const [scrolled, setScrolled] = useState<boolean>(false)
+
+  const [showNav, setShowNav] = useState(window.innerWidth >= 768 || false)
 
   const createLinkSection = (label: string, to: string) => (
     <Button scrolled={scrolled}>
@@ -38,19 +38,26 @@ const Header = () => {
     <Center scrolled={scrolled}>
       <Section>
         <Logo scrolled={scrolled} src={logo} alt='Logo' />
-        {showNav ? (
-          <Nav>
-            {createLinkSection('Home', 'banner')}
-            {createLinkSection('Serviços', 'services')}
-            {createLinkSection('Clientes e mídias', 'followUs')}
-            {createLinkSection('Contato', 'contact')}
-          </Nav>
-        ) : (
-          <FontAwesomeIcon icon={faBars} onClick={() => console.log('Teste Clicou')} />
+
+        {window.innerWidth <= 768 && (
+          <FontAwesomeIcon
+            icon={faBars}
+            color={scrolled ? 'black' : 'white'}
+            size='2x'
+            onClick={() => setShowNav(!showNav)}
+          />
         )}
+        <Nav>
+          {(window.innerWidth >= 768 || showNav) && (
+            <>
+              {createLinkSection('Home', 'banner')}
+              {createLinkSection('Serviços', 'services')}
+              {createLinkSection('Clientes e mídias', 'followUs')}
+              {createLinkSection('Contato', 'contact')}
+            </>
+          )}
+        </Nav>
       </Section>
     </Center>
   )
 }
-
-export default Header
